@@ -1,0 +1,11 @@
+.container {
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  gap: 10px;
+}
