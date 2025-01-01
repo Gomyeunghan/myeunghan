@@ -1,0 +1,28 @@
+.arrow02 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  rotate: -45deg;
+  border-left: 3px solid gray;
+  border-bottom: 3px solid gray;
+  opacity: 0.5;
+}
+
+.arrowwapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}

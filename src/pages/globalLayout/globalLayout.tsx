@@ -7,6 +7,15 @@ interface GlobalLayOut {
   children: ReactNode;
 }
 
+// refs 타입 정의 추가
+interface RefsProps {
+  refs?: {
+    aboutRef: React.RefObject<HTMLDivElement | null>;
+    skilRef: React.RefObject<HTMLDivElement | null>;
+    portfolioRef: React.RefObject<HTMLDivElement | null>;
+  };
+}
+
 export default function GlobalLayOut({ children }: GlobalLayOut) {
   const { element: aboutRef, onMoveToElement: moveToAbout } = useMoveScrool();
   const { element: skilRef, onMoveToElement: moveToSkill } = useMoveScrool();
@@ -21,18 +30,20 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
   };
 
   return (
-    <>
-      <header className={S.container}>
-        <button>MyeungHan</button>
+    <div className={S.container}>
+      <header className={S.header}>
         <nav className={S.menu}>
-          <button onClick={moveToAbout}>About</button>
-          <button onClick={moveToSkill}>Skill</button>
-          <button onClick={moveToPortfolio}>Portfolio</button>
+          <button>MyeungHan</button>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <button onClick={moveToAbout}>About</button>
+            <button onClick={moveToSkill}>Skill</button>
+            <button onClick={moveToPortfolio}>Portfolio</button>
+          </div>
         </nav>
       </header>
 
       {/* children에 ref 전달 */}
-      {React.cloneElement(children as React.ReactElement, { refs })}
-    </>
+      {React.cloneElement(children as React.ReactElement<RefsProps>, { refs })}
+    </div>
   );
 }

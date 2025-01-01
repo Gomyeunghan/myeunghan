@@ -1,0 +1,14 @@
+.container {
+  padding-top: 10%;
+}
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.cardwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100lvh;
+  gap: 20px;
+}

@@ -8,7 +8,7 @@ export default function Card({
   description: string[];
 }) {
   return (
-    <div>
+    <div style={{ flex: "1" }}>
       <ul className={S.container}>
         <h1>{title}</h1>
         {description.map((desc, index) => (
