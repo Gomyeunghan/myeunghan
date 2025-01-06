@@ -23,3 +23,9 @@
 .container {
   margin: 0 50px;
 }
+.container button {
+  font-family: "NanumSquareNeoExtraBold";
+  background: none;
+  border: 0px;
+  cursor: pointer;
+}

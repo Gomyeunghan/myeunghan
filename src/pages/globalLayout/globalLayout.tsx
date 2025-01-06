@@ -34,7 +34,7 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
       <header className={S.header}>
         <nav className={S.menu}>
           <button>MyeungHan</button>
-          <div style={{ display: "flex", gap: "10px" }}>
+          <div style={{ display: "flex", gap: "50px" }}>
             <button onClick={moveToAbout}>About</button>
             <button onClick={moveToSkill}>Skill</button>
             <button onClick={moveToPortfolio}>Portfolio</button>

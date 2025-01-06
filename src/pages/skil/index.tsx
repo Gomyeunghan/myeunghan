@@ -11,7 +11,7 @@ const skil = [
 export default function Skil() {
   return (
     <div className={S.container}>
-      <h2 className={S.title}>SKIL</h2>
+      <h2 className={S.title}>SKILL</h2>
       <div className={S.cardwrapper}>
         {skil.map((skils, index) => (
           <Card {...skils} key={index} />
