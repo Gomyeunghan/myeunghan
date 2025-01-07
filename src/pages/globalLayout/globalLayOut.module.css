@@ -1,7 +1,6 @@
 .header {
   width: 100%;
   box-sizing: border-box;
-  padding: 50px 0px;
   font-size: large;
   font-weight: bold;
   display: flex;
@@ -21,6 +20,7 @@
   -webkit-backdrop-filter: blur(10px);
 }
 .container {
+  scrollbar-width: none;
   margin: 0 50px;
 }
 .container button {

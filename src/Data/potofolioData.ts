@@ -1,0 +1,50 @@
+export const potofolioData = [
+  {
+    title: "포켓몬도감",
+    team: "persnol",
+    period: "2024.10.01~2024.11.01",
+    explanation: "포켓몬api를 활용한 포켓몬도감 ",
+    stack: ["next", "react", "module", "type"],
+    description:
+      "프론트엔드 개발자를 준비하면서 만들어본 프로젝트 포켓몬 api를 활용하여 원하는 포켓몬이름을 검색하여 해당페이지로 이동가능 포켓몬카드 호버애니메이션으로 마우스의 위치에따라 카드가 움직이도록 스타일링함",
+    point: ["반응형 웹으로구현", "FramerMotion을 사용하여 애니메이션 구현"],
+    link: ["/", "/"],
+    preview: ["pokemon1.png", "pokemon2.png"],
+  },
+  {
+    title: "포켓몬도감2",
+    team: "persnol",
+    period: "2024.10.01~2024.11.01",
+    explanation: "포켓몬api를 활용한 포켓몬도감",
+    stack: ["next", "react", "module", "type"],
+  },
+  {
+    title: "포켓몬도감3",
+    team: "persnol",
+    period: "2024.10.01~2024.11.01",
+    explanation: "포켓몬api를 활용한 포켓몬도감",
+    stack: ["next", "react", "module", "type"],
+    description: "",
+  },
+  {
+    title: "포켓몬도감4",
+    team: "persnol",
+    period: "2024.10.01~2024.11.01",
+    explanation: "포켓몬api를 활용한 포켓몬도감",
+    stack: ["next", "react", "module", "type"],
+  },
+  {
+    title: "포켓몬도감5",
+    team: "persnol",
+    period: "2024.10.01~2024.11.01",
+    explanation: "포켓몬api를 활용한 포켓몬도감",
+    stack: ["next", "react", "module", "type"],
+  },
+  {
+    title: "포켓몬도감6",
+    team: "persnol",
+    period: "2024.10.01~2024.11.01",
+    explanation: "포켓몬api를 활용한 포켓몬도감",
+    stack: ["next", "react", "module", "type"],
+  },
+];
