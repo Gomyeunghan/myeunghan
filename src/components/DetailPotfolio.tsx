@@ -82,7 +82,15 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
             <div style={{ paddingTop: "100px" }}>
               <h4>미리보기</h4>
               <span>이미지를 클릭하면 크게볼수 있습니다.</span>
-              <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  marginTop: "50px ",
+                  gap: "10px ",
+                }}
+              >
                 {potofolioData.preview.map((item, index) => {
                   return <img src={`/images/${item}`} alt="" key={index} />;
                 })}

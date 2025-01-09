@@ -1,15 +1,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 3px groove #00adb5;
+  align-content: stretch;
+  border: 3px groove var(--primary-color);
   border-radius: 20px;
-  height: 80%;
   padding: 30px 50px;
   color: #0f1035;
   gap: 30px;
   list-style: circle;
   flex: 1;
+  height: 100%;
 }
 .container li {
   color: #393e46;
@@ -18,7 +18,7 @@
   font-weight: 800;
 }
 .container h1 {
-  color: #00adb5;
+  color: var(--primary-color);
   font-size: 24px;
   font-family: NanumSquareNeoBold;
 }

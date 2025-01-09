@@ -33,8 +33,13 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
     <div className={S.container}>
       <header className={S.header}>
         <nav className={S.menu}>
-          <button>MyeungHan</button>
-          <div style={{ display: "flex", gap: "50px" }}>
+          <button
+            className="oleo-script-bold"
+            style={{ border: "none", background: "none", cursor: "pointer" }}
+          >
+            Light_Han
+          </button>
+          <div className={S.button_wrapper}>
             <button onClick={moveToAbout}>About</button>
             <button onClick={moveToSkill}>Skill</button>
             <button onClick={moveToPortfolio}>Portfolio</button>

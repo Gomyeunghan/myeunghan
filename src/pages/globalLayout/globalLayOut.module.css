@@ -23,7 +23,13 @@
   scrollbar-width: none;
   margin: 0 50px;
 }
-.container button {
+
+.button_wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.button_wrapper button {
   font-family: "NanumSquareNeoExtraBold";
   background: none;
   border: 0px;

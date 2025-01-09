@@ -16,7 +16,9 @@
 .grid_container {
   padding: 0px 200px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4개의 열, 균등 분배 */
+  grid-template-columns: repeat(4, 1fr); /* 4개의 열배 */
   place-items: center;
-  gap: 10px; /* 아이템 간격 */
+  justify-content: center;
+  gap: 10px; /* 아이템 
+  간격 */
 }
