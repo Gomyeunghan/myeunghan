@@ -1,8 +1,10 @@
 .container {
   display: flex;
-  height: 80vh;
+  height: 60vh;
+  padding: 0 200px;
 }
 .title {
+  padding-top: 100px;
   font-family: NanumSquareNeoHeavy;
   color: #00adb5;
   text-align: center;

@@ -45,12 +45,8 @@ export default function Potofolio() {
 
   return (
     <>
-      <h2 className={S.title}>Potofolio</h2>
-      <div
-        style={{ height: "100vh" }}
-        className={S.container}
-        onClick={closeDialog}
-      >
+      <div className={S.container} onClick={closeDialog}>
+        <h2 className={S.title}>Potofolio</h2>
         <PotofolioCard onCardClick={showDialog} potofolioData={potofolioData} />
         <DetailPotfolio ref={dialogRef} potofolioData={potofolio} />
       </div>

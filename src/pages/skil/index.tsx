@@ -41,7 +41,7 @@ export default function Skil() {
       <div className={S.container}>
         <div className={S.cardwrapper}>
           {skil.map((skils, index) => (
-            <Card {...skils} key={index} />
+            <Card {...skils} key={index} duration={index} />
           ))}
         </div>
       </div>
