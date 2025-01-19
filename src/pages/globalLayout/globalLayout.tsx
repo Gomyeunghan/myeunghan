@@ -1,7 +1,10 @@
+"use client";
+
 // GlobalLayout.tsx
 import S from "./globalLayOut.module.css";
 import React, { ReactNode } from "react";
 import useMoveScrool from "@/hook/useMoveScroll";
+import { PageStoreProvider } from "@/provider/StoreProvider";
 
 interface GlobalLayOut {
   children: ReactNode;
@@ -30,25 +33,29 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
   };
 
   return (
-    <div className={S.container}>
-      <header className={S.header}>
-        <nav className={S.menu}>
-          <button
-            className="oleo-script-bold"
-            style={{ border: "none", background: "none", cursor: "pointer" }}
-          >
-            Light_Han
-          </button>
-          <div className={S.button_wrapper}>
-            <button onClick={moveToAbout}>About</button>
-            <button onClick={moveToSkill}>Skill</button>
-            <button onClick={moveToPortfolio}>Portfolio</button>
-          </div>
-        </nav>
-      </header>
+    <PageStoreProvider>
+      <div className={S.container}>
+        <header className={S.header}>
+          <nav className={S.menu}>
+            <button
+              className="oleo-script-bold"
+              style={{ border: "none", background: "none", cursor: "pointer" }}
+            >
+              Light_Han
+            </button>
+            <div className={S.button_wrapper}>
+              <button onClick={moveToAbout}>About</button>
+              <button onClick={moveToSkill}>Skill</button>
+              <button onClick={moveToPortfolio}>Portfolio</button>
+            </div>
+          </nav>
+        </header>
 
-      {/* children에 ref 전달 */}
-      {React.cloneElement(children as React.ReactElement<RefsProps>, { refs })}
-    </div>
+        {/* children에 ref 전달 */}
+        {React.cloneElement(children as React.ReactElement<RefsProps>, {
+          refs,
+        })}
+      </div>
+    </PageStoreProvider>
   );
 }

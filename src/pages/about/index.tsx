@@ -1,7 +1,15 @@
+"use client";
+
 import DownArrow from "@/components/DownArrow";
 import S from "./index.module.css";
-
+import { usePageStore } from "@/provider/StoreProvider";
 export default function About() {
+  const title = "Super \r\n Energizer";
+
+  const { isValied } = usePageStore((state) => state);
+
+  console.log(isValied);
+
   return (
     <div className={S.container}>
       <div className={S.components}>
@@ -10,6 +18,10 @@ export default function About() {
             src="/스크린샷 2025-01-01 00.18.31.png"
             className={S.image}
           ></img>
+
+          <div className={S.title}>
+            <pre className="oleo-script-regular">{title}</pre>
+          </div>
           <div className={S.linkbox}>
             <a>GitHub</a>
             <a>Velog</a>

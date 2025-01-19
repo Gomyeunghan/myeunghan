@@ -1,4 +1,5 @@
 // Home.tsx
+import TypingComponent from "@/components/TypingComponent";
 import About from "./about";
 import Potofolio from "./potofolio";
 import Skil from "./skil";
@@ -14,6 +15,9 @@ interface HomeProps {
 export default function Home({ refs }: HomeProps) {
   return (
     <div>
+      <div>
+        <TypingComponent />
+      </div>
       <div ref={refs?.aboutRef}>
         <About />
       </div>
