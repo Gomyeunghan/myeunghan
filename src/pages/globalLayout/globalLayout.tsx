@@ -41,23 +41,33 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
   return (
     <PageStoreProvider>
       <div className={S.container}>
-        <div
-          className={`${S.bar_container} ${isActive ? S.active : ""}`}
-          onClick={toggleMenu}
-        >
-          <div className={S.bar}></div>
-          <div className={S.bar}></div>
-          <div className={S.bar}></div>
-        </div>
+        {/* isActive 일때메뉴바 내려와야됨 기존 메뉴바는 숨겨야됨  */}
 
         <header className={S.header}>
+          <button
+            className="oleo-script-bold"
+            style={{ border: "none", background: "none", cursor: "pointer" }}
+          >
+            Light_Han
+          </button>
+          <div
+            className={`${S.bar_container} ${isActive ? S.active : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className={S.bar}></div>
+            <div className={S.bar}></div>
+            <div className={S.bar}></div>
+          </div>
+
+          <nav className={`${S.mobile_menu} ${isActive ? S.active : ""}`}>
+            <div className={S.button_wrapper}>
+              <button onClick={moveToAbout}>About</button>
+              <button onClick={moveToSkill}>Skill</button>
+              <button onClick={moveToPortfolio}>Portfolio</button>
+            </div>
+          </nav>
+
           <nav className={S.menu}>
-            <button
-              className="oleo-script-bold"
-              style={{ border: "none", background: "none", cursor: "pointer" }}
-            >
-              Light_Han
-            </button>
             <div className={S.button_wrapper}>
               <button onClick={moveToAbout}>About</button>
               <button onClick={moveToSkill}>Skill</button>

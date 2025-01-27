@@ -1,9 +1,18 @@
 .header {
+  padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
   font-size: large;
   font-weight: bold;
   display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .menu {
@@ -11,21 +20,37 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding: 20px 0px;
-  position: fixed;
-  margin: 0 50px;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(10px);
 }
+.mobile_menu {
+  background-color: white;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0px;
+  position: absolute;
+  margin: 0;
+  top: 50px;
+  left: 0;
+  right: 0;
+  opacity: 0; /* 초기 상태는 투명 */
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s ease;
+}
+
 .container {
   scrollbar-width: none;
-  margin: 0 200px;
+  margin: 0 100px;
 }
 
 .button_wrapper {
+  width: 100%;
   display: flex;
   gap: 50px;
 }
@@ -36,18 +61,55 @@
   border: 0px;
   cursor: pointer;
 }
-@media (max-width: 765px) {
+@media (max-width: 1025px) {
   .container {
     scrollbar-width: none;
     margin: 0 20px;
   }
+  .menu {
+    display: none;
+  }
+  .mobile_menu {
+    background-color: white;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0px;
+    position: absolute;
+    margin: 0;
+    top: 50px;
+    left: 0;
+    right: 0;
+    opacity: 0; /* 초기 상태는 투명 */
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+  }
+  .mobile_menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .button_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 
   .header {
-    /* width: 100%;
+    width: 100%;
     box-sizing: border-box;
     font-size: large;
-    font-weight: bold; */
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    position: fixed;
+    padding: 0 20px;
+    align-items: center;
+    z-index: 100;
   }
 
   .bar_container.bar {
@@ -59,8 +121,6 @@
     position: relative;
     width: 30px;
     height: 30px;
-    top: 20px;
-    left: 95%;
     z-index: 100;
   }
   .bar {
@@ -88,5 +148,8 @@
   }
   .bar_container.active .bar:nth-child(3) {
     transform: translateY(-13px) rotate(-45deg);
+  }
+  .bar_wrapper {
+    flex: 1;
   }
 }

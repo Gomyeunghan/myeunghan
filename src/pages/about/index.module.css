@@ -75,7 +75,7 @@
   animation: fadeInUp 1s ease-in-out; /* 1초 동안 천천히 등장 */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1025px) {
   .container {
     position: relative;
     padding-top: 100px;

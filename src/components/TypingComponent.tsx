@@ -43,6 +43,7 @@ const TypingComponent = () => {
       document.body.style.overflow = "";
     }
   }, [intro]);
+  console.log("인트로", intro);
 
   return (
     <div
