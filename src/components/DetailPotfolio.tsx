@@ -3,6 +3,7 @@ import S from "./DetailPotfolio.module.css";
 import { potofolioDataType } from "@/type/potofolioType";
 import { CiLink } from "react-icons/ci";
 import { BsFillPinAngleFill } from "react-icons/bs";
+import { usePageStore } from "@/provider/StoreProvider";
 
 interface DetailPotfolioProps {
   potofolioData: potofolioDataType;
@@ -10,17 +11,22 @@ interface DetailPotfolioProps {
 
 const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
   ({ potofolioData }, ref) => {
+    const { setDialog } = usePageStore((state) => state);
+
+    const closeDialog = () => {
+      if (ref && "current" in ref) {
+        ref.current?.close();
+        setDialog(false);
+      }
+    };
+
     return (
       <dialog className={S.container} ref={ref}>
+        <div className={S.btn} onClick={closeDialog}>
+          닫기
+        </div>
         <div className={S.box}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              alignItems: "center",
-            }}
-          >
+          <div className={S.box_container}>
             <h3>{potofolioData.title}</h3>
             <div
               style={{ display: "flex", gap: "10px", justifyContent: "center" }}
@@ -57,13 +63,7 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
             </div>
           </div>
           <div style={{ width: "70%", border: "1px solid gray" }}></div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "start",
-            }}
-          >
+          <div className={S.project}>
             {potofolioData.team === "persnol" ? (
               <h3>개인프로젝트</h3>
             ) : (
@@ -79,7 +79,14 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
                 return <li key={index}>{item}</li>;
               })}
             </ul>
-            <div style={{ paddingTop: "100px" }}>
+            <div
+              style={{
+                paddingTop: "100px",
+                display: "flex",
+                flexDirection: "column",
+                textAlign: "center",
+              }}
+            >
               <h4>미리보기</h4>
               <span>이미지를 클릭하면 크게볼수 있습니다.</span>
               <div

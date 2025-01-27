@@ -6,11 +6,13 @@
   border-left: 3px solid gray;
   border-bottom: 3px solid gray;
   opacity: 0.5;
+  margin: 0 auto;
 }
 
 .arrowwapper {
+  width: 100%;
   margin-top: 50px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   animation: blink 1s infinite;
 }

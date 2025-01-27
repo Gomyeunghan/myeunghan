@@ -22,7 +22,7 @@
 }
 .container {
   scrollbar-width: none;
-  margin: 0 50px;
+  margin: 0 200px;
 }
 
 .button_wrapper {
@@ -35,4 +35,10 @@
   background: none;
   border: 0px;
   cursor: pointer;
+}
+@media (max-width: 765px) {
+  .container {
+    scrollbar-width: none;
+    margin: 0 20px;
+  }
 }

@@ -18,10 +18,22 @@ export default function About() {
             src="/스크린샷 2025-01-01 00.18.31.png"
             className={S.image}
           ></img>
-
-          <div className={S.title}>
+          <div
+            className={S.title}
+            style={
+              isValied
+                ? { opacity: "0", transform: "translateY(-20px)" }
+                : {
+                    opacity: "1",
+                    transform: "translateY(0)",
+                    transition:
+                      "opacity 1s ease-in-out, transform 1s ease-in-out",
+                  }
+            }
+          >
             <pre className="oleo-script-regular">{title}</pre>
           </div>
+
           <div className={S.linkbox}>
             <a>GitHub</a>
             <a>Velog</a>

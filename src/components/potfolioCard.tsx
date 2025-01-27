@@ -28,7 +28,7 @@ export default function PotofolioCard({
   if (!isClient) return null;
 
   return (
-    <div className={S.grid_container} style={{ minHeight: "100px" }}>
+    <div className={S.grid_container}>
       {potofolioData.map((item, index) => (
         <MotionDiv
           key={index}

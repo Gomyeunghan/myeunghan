@@ -1,6 +1,6 @@
 "use client";
 
-import { createPageStore, PageState } from "@/store/Store";
+import { createPageStore, PageStore } from "@/store/Store";
 import { createContext, ReactNode, useRef } from "react";
 import { useStore } from "zustand";
 import { useContext } from "react";
@@ -23,7 +23,7 @@ export const PageStoreProvider = ({ children }: PageStoreProviderProps) => {
   );
 };
 
-export const usePageStore = <T,>(selector: (store: PageState) => T): T => {
+export const usePageStore = <T,>(selector: (store: PageStore) => T): T => {
   const pageStoreContext = useContext(PageStoreContext);
 
   if (!pageStoreContext) {
