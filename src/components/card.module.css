@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-content: stretch;
   border: 3px groove var(--primary-color);
   border-radius: 20px;
   padding: 30px 30px;
@@ -10,6 +9,7 @@
   list-style: circle;
   flex: 1;
   height: 100%;
+  max-width: 400px;
 }
 .container li {
   color: #393e46;

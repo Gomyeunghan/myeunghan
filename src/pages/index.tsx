@@ -21,7 +21,7 @@ export default function Home({ refs }: HomeProps) {
       <div ref={refs?.aboutRef}>
         <About />
       </div>
-      <div ref={refs?.skilRef} style={{ display: "inline-block" }}>
+      <div ref={refs?.skilRef}>
         <Skil />
       </div>
       <div ref={refs?.portfolioRef}>

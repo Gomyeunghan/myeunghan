@@ -51,12 +51,10 @@ export default function Potofolio() {
   });
 
   return (
-    <>
-      <div className={S.container} onClick={closeDialog}>
-        <h2 className={S.title}>Potofolio</h2>
-        <PotofolioCard onCardClick={showDialog} potofolioData={potofolioData} />
-        <DetailPotfolio ref={dialogRef} potofolioData={potofolio} />
-      </div>
-    </>
+    <div className={S.container} onClick={closeDialog}>
+      <h2 className={S.title}>Potofolio</h2>
+      <PotofolioCard onCardClick={showDialog} potofolioData={potofolioData} />
+      <DetailPotfolio ref={dialogRef} potofolioData={potofolio} />
+    </div>
   );
 }
