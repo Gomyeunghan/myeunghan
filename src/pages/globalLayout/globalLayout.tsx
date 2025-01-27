@@ -2,7 +2,7 @@
 
 // GlobalLayout.tsx
 import S from "./globalLayOut.module.css";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import useMoveScrool from "@/hook/useMoveScroll";
 import { PageStoreProvider } from "@/provider/StoreProvider";
 
@@ -24,6 +24,7 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
   const { element: skilRef, onMoveToElement: moveToSkill } = useMoveScrool();
   const { element: portfolioRef, onMoveToElement: moveToPortfolio } =
     useMoveScrool();
+  const [isActive, setIsActive] = useState(false);
 
   // ref 객체들을 하나의 객체로 묶어서 전달
   const refs = {
@@ -32,9 +33,23 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
     portfolioRef,
   };
 
+  console.log(isActive);
+  const toggleMenu = () => {
+    setIsActive((prev) => !prev);
+  };
+
   return (
     <PageStoreProvider>
       <div className={S.container}>
+        <div
+          className={`${S.bar_container} ${isActive ? S.active : ""}`}
+          onClick={toggleMenu}
+        >
+          <div className={S.bar}></div>
+          <div className={S.bar}></div>
+          <div className={S.bar}></div>
+        </div>
+
         <header className={S.header}>
           <nav className={S.menu}>
             <button
