@@ -32,9 +32,15 @@ export default function About() {
           </div>
 
           <div className={S.linkbox}>
-            <a>GitHub</a>
-            <a>Velog</a>
-            <a>Email</a>
+            <a href="https://github.com/Gomyeunghan/" target="_blank">
+              GitHub
+            </a>
+            <a href="https://velog.io/@rhaudgks12/posts" target="_blank">
+              Velog
+            </a>
+            <a href="rhaudkgs04@gmail.com" target="_blank">
+              Email
+            </a>
           </div>
         </div>
         <div className={S.about}>
