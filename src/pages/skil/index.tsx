@@ -1,5 +1,6 @@
 import Card from "@/components/card";
 import S from "./index.module.css";
+import { useEffect } from "react";
 
 const skil = [
   {

@@ -12,6 +12,7 @@ const TypingComponent = () => {
 
   useEffect(() => {
     const timerId = setInterval(() => {
+      window.scrollTo(0, 0);
       if (sentence.length > currentIndex.current) {
         setWord((state) => {
           const newState = state + sentence[currentIndex.current];
