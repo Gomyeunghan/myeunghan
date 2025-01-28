@@ -2,7 +2,7 @@
 
 // GlobalLayout.tsx
 import S from "./globalLayOut.module.css";
-import React, { ReactNode, useState } from "react";
+import React, { ReactElement, ReactNode, useState } from "react";
 import useMoveScrool from "@/hook/useMoveScroll";
 import { PageStoreProvider } from "@/provider/StoreProvider";
 
@@ -26,6 +26,10 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
     useMoveScrool();
   const [isActive, setIsActive] = useState(false);
 
+  if (!children) {
+    return null;
+  }
+
   // ref 객체들을 하나의 객체로 묶어서 전달
   const refs = {
     aboutRef,
@@ -33,7 +37,6 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
     portfolioRef,
   };
 
-  console.log(isActive);
   const toggleMenu = () => {
     setIsActive((prev) => !prev);
   };
@@ -41,8 +44,6 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
   return (
     <PageStoreProvider>
       <div className={S.container}>
-        {/* isActive 일때메뉴바 내려와야됨 기존 메뉴바는 숨겨야됨  */}
-
         <header className={S.header}>
           <button
             className="oleo-script-bold"
@@ -76,8 +77,7 @@ export default function GlobalLayOut({ children }: GlobalLayOut) {
           </nav>
         </header>
 
-        {/* children에 ref 전달 */}
-        {React.cloneElement(children as React.ReactElement<RefsProps>, {
+        {React.cloneElement(children as ReactElement<RefsProps>, {
           refs,
         })}
       </div>

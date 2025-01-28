@@ -14,10 +14,7 @@ export default function About() {
     <div className={S.container}>
       <div className={S.components}>
         <div>
-          <img
-            src="/스크린샷 2025-01-01 00.18.31.png"
-            className={S.image}
-          ></img>
+          <img src="/me.png" className={S.image}></img>
           <div
             className={S.title}
             style={
