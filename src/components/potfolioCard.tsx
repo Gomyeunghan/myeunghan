@@ -56,10 +56,13 @@ export default function PotofolioCard({
               style={{
                 display: "flex",
                 justifyContent: "space-between",
+                alignItems: "center",
               }}
             >
               <h3>{item.title}</h3>
-              <span>{item.team}</span>
+              <span className={`${item.team === "persnol" ? S.bedge : S.team}`}>
+                {item.team}
+              </span>
             </div>
             <p>{item.period}</p>
             <p>{item.explanation}</p>

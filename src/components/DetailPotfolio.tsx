@@ -44,7 +44,14 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
             </div>
             <span>{potofolioData.period}</span>
             <p style={{ textAlign: "center" }}>{potofolioData.description}</p>
-            <div style={{ display: "flex", gap: "50px", margin: "50px 0px" }}>
+            <div
+              style={{
+                display: "flex",
+                gap: "50px",
+                margin: "50px 0px",
+                justifyContent: "center",
+              }}
+            >
               <a
                 style={{ display: "flex" }}
                 href="https://github.com/Gomyeunghan/pokemon"

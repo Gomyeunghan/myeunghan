@@ -10,6 +10,9 @@
   height: 80lvh;
   scrollbar-width: none;
 }
+.container p {
+  font-size: 1rem;
+}
 .container::backdrop {
   opacity: 0.5;
   background: gray;
@@ -26,7 +29,7 @@
   height: 100%;
   z-index: 100;
   gap: 10px;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .box h4 {
   display: flex;
@@ -36,7 +39,7 @@
 }
 .box h3 {
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 50px 0;
 }
 .box li {

@@ -31,7 +31,7 @@
 
 .container {
   scrollbar-width: none;
-  margin: 0 100px 0 100px;
+  margin: 0 100px 50px 100px;
 }
 
 .button_wrapper {
@@ -64,10 +64,10 @@
     padding-bottom: 20px;
     position: absolute;
     margin: 0;
-    top: 0px;
+    top: 40px;
     left: 0;
     right: 0;
-    opacity: 0; /* 초기 상태는 투명 */
+    opacity: 0;
     visibility: hidden;
     background-color: rgba(255, 255, 255, 0.5);
     transition: all 0.4s ease;
@@ -106,7 +106,7 @@
     position: relative;
     width: 30px;
     height: 30px;
-    z-index: 100;
+    z-index: 200;
   }
   .bar {
     width: 100%;

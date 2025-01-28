@@ -1,11 +1,35 @@
 .container {
   max-width: 400px;
-  max-height: 500px;
+  height: 100%;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 6px 12px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+}
+
+.bedge {
+  background-color: #2973b2;
+  color: white;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  padding: 5px;
+}
+.team {
+  background-color: #eb5a3c;
+  color: white;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.container p {
+  font-size: 0.75rem;
+}
+.container h3 {
+  font-size: 1rem;
 }
 .container img {
   width: 400px;
