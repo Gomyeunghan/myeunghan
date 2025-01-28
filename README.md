@@ -65,6 +65,6 @@
 
 ## 📬 Contact
 
-- **Email**: [your.email@example.com]
-- **GitHub**: [GitHub 프로필 링크]
-- **Velog**: [Velog 블로그 링크]
+- **Email**: [rhaudgks04@gmail.com]
+- **GitHub**: [[Github](https://github.com/Gomyeunghan/myeunghan)]
+- **Velog**: [[Velog](https://velog.io/@rhaudgks12/posts)]
