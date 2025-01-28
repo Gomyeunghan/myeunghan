@@ -1,7 +1,9 @@
 # Light_Han - Frontend Developer Portfolio 👋
 
-[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github&logoColor=white)](https://github.com/yourusername)
-[![Velog](https://img.shields.io/badge/Velog-20C997?style=flat&logo=velog&logoColor=white)](https://velog.io/@yourusername)
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/2ca08256-8514-441d-ac1d-8b1b57bed8d0" />
+
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github&logoColor=white)](https://github.com/Gomyeunghan/myeunghan)
+[![Velog](https://img.shields.io/badge/Velog-20C997?style=flat&logo=velog&logoColor=white)](https://velog.io/@rhaudgks12/posts)
 
 ## 🌟 Super Energizer
 
