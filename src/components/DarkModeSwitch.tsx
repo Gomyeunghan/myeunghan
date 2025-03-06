@@ -1,5 +1,4 @@
-
-
+export default function DarkModeSwitchComponent() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +11,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke="currentColor"
-      style="cursor: pointer; transform: rotate(90deg);"
+      style={{ cursor: "pointer", transform: "rotate(90deg)" }}
     >
       <mask id="circle-mask-14">
         <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
