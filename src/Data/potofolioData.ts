@@ -61,7 +61,7 @@ export const potofolioData = [
       "스와이퍼 슬라이드 기능:랜딩 페이지는 포켓베이스에 저장된webp 형식의 이미지 데이터를 비동기적으로 불러옵니다.",
     ],
     link: [
-      "https://github.com/Gomyeunghan/5jorago-vanilla-project",
+      "https://github.com/Gomyeunghan/5jorago-5jorago-project",
       "https://5joragotaing.netlify.app/",
     ],
     preview: ["taing.png"],
@@ -83,7 +83,7 @@ export const potofolioData = [
       "zustand 를 활용해 프로젝트의 전역상태를 관리하였습니다.",
     ],
     link: [
-      "https://github.com/Gomyeunghan/5jorago-vanilla-project",
+      "https://github.com/Gomyeunghan/vanilla-vanilla-project",
       "https://5joragotaing.netlify.app/",
     ],
     preview: ["portfolio.png"],
