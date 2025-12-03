@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import S from "./potfolioCard.module.css";
-import { potofolioDataType } from "@/type/potofolioType";
+import { PortfolioData } from "@/type/potofolioType";
 import { motion } from "framer-motion";
 
 interface PotofolioCardProps {
   onCardClick: (index: number) => void;
-  potofolioData: potofolioDataType[];
+  potofolioData: PortfolioData[];
 }
 
 export default function PotofolioCard({
