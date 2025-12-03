@@ -3,14 +3,19 @@ import S from "./potofolio.module.css";
 import DetailPotfolio from "@/components/DetailPotfolio";
 import { useEffect, useRef, useState, MouseEvent } from "react";
 import { potofolioData } from "@/Data/potofolioData";
-import { potofolioDataType } from "@/type/potofolioType";
+import { PortfolioData } from "@/type/potofolioType";
 import { usePageStore } from "@/provider/StoreProvider";
+
+interface potofolioData {
+  data: PortfolioData;
+}
 
 export default function Potofolio() {
   const { isDialog, setDialog } = usePageStore((state) => state);
-  const [potofolio, setpotofolio] = useState<potofolioDataType>({
+  const [potofolio, setpotofolio] = useState<PortfolioData>({
     title: "",
     team: "",
+    link: ["", ""],
     period: "",
     explanation: "",
     description: "",

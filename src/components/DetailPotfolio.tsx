@@ -1,13 +1,13 @@
 import { forwardRef, useState } from "react";
 import S from "./DetailPotfolio.module.css";
-import { potofolioDataType } from "@/type/potofolioType";
+import { PortfolioData } from "@/type/potofolioType";
 import { CiLink } from "react-icons/ci";
 import { BsFillPinAngleFill } from "react-icons/bs";
 import { usePageStore } from "@/provider/StoreProvider";
 import ClickPreView from "./ClickPreView";
 
 interface DetailPotfolioProps {
-  potofolioData: potofolioDataType;
+  potofolioData: PortfolioData;
 }
 
 const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
@@ -57,14 +57,14 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
               >
                 <a
                   style={{ display: "flex" }}
-                  href="https://github.com/Gomyeunghan/pokemon"
+                  href={potofolioData.link[0]}
                   target="_blank"
                 >
                   <span className="github"></span>깃헙 바로가기
                 </a>
                 <a
                   style={{ display: "flex" }}
-                  href="https://pokemon-alpha-olive.vercel.app/?page=0&pageGroup=1"
+                  href={potofolioData.link[1]}
                   target="_blank"
                 >
                   <CiLink style={{ width: "24px", height: "24px" }} />
@@ -81,7 +81,7 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
             ></div>
             <div className={S.project}>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                {potofolioData.team === "persnol" ? (
+                {potofolioData.team === "personal" ? (
                   <h3>개인프로젝트</h3>
                 ) : (
                   <h3>팀 프로젝트</h3>
