@@ -15,7 +15,10 @@ export const potofolioData = [
       "CSS를 활용한 마우스 호버 인터랙션 구현",
       "반응형 웹 디자인으로 모바일/태블릿/PC 대응",
     ],
-    link: ["/", "/"],
+    link: [
+      "https://github.com/Gomyeunghan/pokemon",
+      "https://pokemon-alpha-olive.vercel.app/",
+    ],
     preview: ["pokemon1.png", "pokemon2.png"],
   },
   {
