@@ -3,6 +3,7 @@ import TypingComponent from "@/components/TypingComponent";
 import About from "./about";
 import Potofolio from "./potofolio";
 import Skil from "./skil";
+import Footer from "./footer";
 
 interface HomeProps {
   refs?: {
@@ -26,6 +27,9 @@ export default function Home({ refs }: HomeProps) {
       </div>
       <div ref={refs?.portfolioRef}>
         <Potofolio />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

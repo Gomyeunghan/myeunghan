@@ -32,13 +32,7 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
           <div className={S.box}>
             <div className={S.box_container}>
               <h3>{potofolioData.title}</h3>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "10px",
-                  justifyContent: "center",
-                }}
-              >
+              <div className={S.stackBoxContainer}>
                 {potofolioData.stack.map((item, index) => {
                   return (
                     <span
@@ -86,14 +80,20 @@ const DetailPotfolio = forwardRef<HTMLDialogElement, DetailPotfolioProps>(
               }}
             ></div>
             <div className={S.project}>
-              {potofolioData.team === "persnol" ? (
-                <h3>개인프로젝트</h3>
-              ) : (
-                <h3>팀 프로젝트</h3>
-              )}
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {potofolioData.team === "persnol" ? (
+                  <h3>개인프로젝트</h3>
+                ) : (
+                  <h3>팀 프로젝트</h3>
+                )}
+              </div>
               <ul>
                 <h4>
-                  <BsFillPinAngleFill style={{ color: "133E87" }} />
+                  <BsFillPinAngleFill
+                    style={{
+                      color: "133E87",
+                    }}
+                  />
                   주요 기능 및 특징
                 </h4>
                 {potofolioData.point.map((item, index) => {
