@@ -6,7 +6,7 @@
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  border: gray 1px solid;
+  border: #f8fafc 1px solid;
 }
 
 .bedge {

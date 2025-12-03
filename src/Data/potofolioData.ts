@@ -14,7 +14,7 @@ export const potofolioData = [
   },
   {
     title: "파티구함",
-    img: "/images/party1.1.png",
+    img: "/images/partymain.png",
 
     team: "team",
     period: "2024.08.26 ~ 2024.09.23",
@@ -27,12 +27,13 @@ export const potofolioData = [
       "게시판 : 사용자끼리 궁금한점 을 소통할수 있는 게시판",
       "스터디 참가 : 위치 기반서비스로 자신 주변 스터디에 참가할수 있는 기능",
       "스터디모집 : 위치 기반 서비스로 자신의 주변(동단위) 스터디 모집글 작성",
+      "ID:test1@test.com PW:Test123!",
     ],
     link: [
       "https://github.com/Gomyeunghan/we-are-final-family",
       "https://we-are-final-family-bay.vercel.app/",
     ],
-    preview: ["party2.png", "party3.png", "party6.png", "party1.1.png"],
+    preview: ["party2.png", "party3.png", "party4.png", "party5.png"],
   },
   {
     title: "TAING(티빙클론코딩)",

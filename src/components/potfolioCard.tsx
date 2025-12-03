@@ -49,7 +49,7 @@ export default function PotofolioCard({
             }}
             viewport={{ once: false }} // 뷰포트에 들어갈 때마다 애니메이션 실행
           >
-            <img src={item.img} alt="" />
+            <img src={item.img} alt="" style={{ objectFit: "contain" }} />
             <div
               style={{
                 padding: "10px",
